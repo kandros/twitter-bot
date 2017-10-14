@@ -58,10 +58,10 @@ func main() {
 			continue
 		}
 
-		// _, err := api.Retweet(t.Id, false)
-		// if err != nil {
-		// 	logrus.Errorf("could not retweet %d:", t.Id)
-		// }
+		_, err := api.Retweet(t.Id, false)
+		if err != nil {
+			logrus.Errorf("could not retweet %d:", t.Id)
+		}
 
 		fmt.Printf("%s\n", t.Text)
 	}
